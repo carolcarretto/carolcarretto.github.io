@@ -1,0 +1,114 @@
+.content {
+  padding-top: 3rem;
+
+  &--narrower {
+    @include atMedium {
+      width: 60%;
+    }
+
+    @include atLarge {
+      width: 50%;
+    }
+  }
+
+  &__image {
+    padding: 5rem 0 2rem 0;
+  }
+
+  @include atSmallMedium {
+    img {
+      padding-top: 3rem;
+    }
+  }
+
+  @include atMedium {
+    img {
+      padding-top: 0;
+    }
+  }
+
+  @include atLarge {
+    &--gray-bg {
+      position: absolute;
+      margin-top: -$wrapperPadding;
+      width: $contentWidth;
+      height: 100%;
+      background-color: $lightGray;
+    }
+  }
+
+  &__description {
+    padding: 4rem 0.9375rem 3.75rem 0.9375rem;
+
+    @include atLarge {
+      padding: 0 0.9375rem 3.75rem 0.9375rem;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: 400;
+    padding-bottom: 1.5rem;
+
+    &--secondary {
+      color: $orange;
+      display: inline-block;
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  &__paragraph {
+    font-size: 0.8rem; //padding-bottom: 5.75rem;
+    width: 100%;
+
+    &--full-width {
+      width: 100%;
+    }
+
+    span {
+      font-family: 'Mukta', sans-serif !important;
+      line-height: 1.5rem;
+    }
+
+    &--less-padding {
+      padding-bottom: 3.75rem;
+    }
+
+    &--push-down {
+      margin-top: 90px;
+    }
+  }
+
+  &__media-gallery {
+    display: flex;
+
+    &__item {
+      flex: 1;
+      padding: 1px;
+    }
+  }
+
+  @include atSmallMedium {
+    padding-top: 0;
+  }
+
+  @include atSmallMedium {
+    &__paragraph {
+      width: 75%;
+    }
+  }
+
+  @include atLarge {
+    margin-left: 25%;
+
+    &__description {
+      padding: 0 0 5.75rem 0;
+    }
+
+    &__title {
+      padding-bottom: 1.5rem;
+    }
+  }
+}
